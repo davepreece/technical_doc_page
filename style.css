@@ -1,0 +1,53 @@
+* {
+    padding: 0px;
+    margin: 5px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "navbar" "main";
+    
+}
+
+#navbar {
+    background-color: lightgrey;
+    position: fixed;
+    width: 200px;
+    grid-area: navbar;
+    padding: 0px 0 20px 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    list-style: none;
+    display: grid;
+    padding: 20px 0 0 0;
+    color: black;
+    border-bottom: 2px black solid;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+#main-doc {
+    margin: 0 0 0 220px;
+}
+
+.main_header {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0;
+    grid-area: main;
+}
+
+@media (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "navbar"
+            "main"
+    }
+}
